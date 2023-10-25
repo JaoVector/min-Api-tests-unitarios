@@ -1,8 +1,6 @@
 # API Mínima com Arquitetura Cebola e Testes Unitários
 ## Descrição do Projeto
-Foi feita uma API Mínima para gerenciar tarefas, utilizando a Arquitetura Cebola e Implementando Testes Unitários. Essa API fornece um CRUD simples como
-Criar uma tarefa, consultar, editar e excluir. O intuito do projeto é apresentar uma forma diferente de se construir uma API Mínima
-sem aplicar todas as configurações dentro do arquivo Program.cs, aproveitando para apresentar o conceito da Arquitetura Cebola.
+Foi feita uma API Mínima para gerenciar tarefas, utilizando a Arquitetura Cebola e Implementando Testes Unitários. Essa API fornece um CRUD simples como Criar uma tarefa, consultar, editar e excluir. O intuito do projeto é apresentar os testes unitários aplicados em uma API Mínima feita na Arquitetura Cebola.
 
 #
 ### Rotas da API:
