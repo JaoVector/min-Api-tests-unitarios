@@ -1,6 +1,6 @@
-# API Mínima com Arquitetura Cebola
+# API Mínima com Arquitetura Cebola e Testes Unitários
 ## Descrição do Projeto
-Foi feita uma API Mínima para gerenciar tarefas, utilizando a Arquitetura Cebola. Essa API fornece um CRUD simples como
+Foi feita uma API Mínima para gerenciar tarefas, utilizando a Arquitetura Cebola e Implementando Testes Unitários. Essa API fornece um CRUD simples como
 Criar uma tarefa, consultar, editar e excluir. O intuito do projeto é apresentar uma forma diferente de se construir uma API Mínima
 sem aplicar todas as configurações dentro do arquivo Program.cs, aproveitando para apresentar o conceito da Arquitetura Cebola.
 
@@ -61,25 +61,82 @@ public enum TarefaEnum
 ```
 
 #
-## Definição de APIs Mínimas
-APIs mínimas são arquitetadas para criar APIs HTTP com dependências mínimas. 
-Elas são ideais para microsserviços e aplicativos que desejam incluir apenas os arquivos, recursos e dependências mínimos no ASP.NET Core.
-
+## Testes Unitários
+### Funções Fact Utilizadas
++ BuscaTarefas_Sucesso_Returns()
++ PostTarefas_Sucesso_Returns()
++ BuscaTarefasAbertas_Sucesso_Returns()
++ BuscaTarefasConcluidas_Sucesso_Returns()
++ BuscaTarefasExcluidas_Sucesso_Returns()
++ BuscaTarefasAtrasadas_Sucesso_Returns()
 #
-## Definição da Arquitetura Cebola
-Em arquiteturas construídas utilizando 3 camadas ou n camadas, ocorre o problema de alto acoplamento pois as camadas dependem rigidamente uma da outra.
-O objetivo da arquitetura cebola é utilizar a inversão de controle para tornar as camadas mais concêntricas, partindo da ideia que uma camada interna não pode saber
-nada de um círculo externo, obtendo maior indepêndencia entre as camadas atribuindo a cada uma delas suas responsabilidades.
-
+### Funções Theory Utilizadas
++ BuscaTarefaPorId_Sucesso_Returns(int id)
++ AtualizaTarefa_Sucesso_Returns(int id)
++ DeletaTarefa_Sucesso_Returns(int id)
++ AtualizaStatusTarefa_Sucesso_ReturnsAsync(int id, string status)
 #
-## Princípios da Arquitetura Cebola.
-
-1. A aplicação é construída em torno de um sistema de modelo de objeto independente.
-2. As camadas internas definem interfaces, camadas externas implementam interfaces.
-3. A direção do acoplamento é em direção ao centro.
-4. Todo o código principal do aplicativo pode ser compilado e executado separadamente da
-infraestrutura.
-
+### Configuração do Objeto Mock
+> [!NOTE]
+> Foi utilizado o Framework XUnit para os testes Unitários, a biblioteca Moq para Mockar os objetos e também uma lista de dados Fake (_tarefas) para simular o banco de dados.
+#
++ Configurando o Objeto ITarefaService para receber dois tipos inteiros e retornar uma lista de objetos do tipo ReadTarefaDTO.
+```C#
+_service.Setup(x => x.ConsultaTarefas(It.IsAny<int>(), It.IsAny<int>()))
+                .Returns<int, int>((skip, take) => _tarefas.Skip(skip).Take(take).AsQueryable());
+```
++ Configurando o objeto para receber um tipo Tarefa e verificar se não existe uma Tarefa de mesmo ID para efetuar a inserção.
+```C#
+_service.Setup(x => x.AddTarefa(It.IsAny<Tarefa>()))
+                .Callback((Tarefa tarefa) => 
+                {
+                    if(!_tarefas.Any(k => k.IdTarefa == tarefa.IdTarefa)) _tarefas.Add(tarefa);
+                });
+```
++ Configurando o objeto para receber um tipo delegate e retornar o objeto do tipo Tarefa que foi encontrado pela expressão na lista _tarefas.
+```C#
+_service.Setup(x => x.GetTarefaPorId(It.IsAny<Expression<Func<Tarefa, bool>>>()))
+                .ReturnsAsync((Expression<Func<Tarefa, bool>> predicate) =>
+                {
+                    return _tarefas.Single(predicate.Compile());
+                });
+```
++ Objeto Mock que vai receber um tipo Tarefa para efetuar a atualização do status.
+```C#
+ _service.Setup(x => x.AtualizaTarefa(It.IsAny<Tarefa>())).Callback((Tarefa tarefa) => 
+            {
+                var consulta = _tarefas.FirstOrDefault(x => x.IdTarefa == tarefa.IdTarefa);
+                if (consulta != null)
+                {
+                    consulta.Status = tarefa.Status;
+                }
+            });
+```
++ Objeto Mock que vai receber um tipo Tarefa para efetuar a atualização da Tarefa
+```C#
+_service.Setup(x => x.AtualizaTarefa(It.IsAny<Tarefa>()))
+                .Callback((Tarefa tarefa) => 
+                {
+                    var consulta = _tarefas.FirstOrDefault(x => x.IdTarefa == tarefa.IdTarefa);
+                    if (consulta != null)
+                    {
+                        consulta.Nome = tarefa.Nome;
+                        consulta.Descricao = tarefa.Descricao;
+                        consulta.DataAbertura = tarefa.DataAbertura;
+                        consulta.DataFechamento = tarefa.DataFechamento;
+                        consulta.Status = tarefa.Status;
+                    }
+                });
+```
++ Objeto Mock que recebe um objeto do tipo Tarefa e verifica se ele existe na lista _tarefas, se existir a tarefa será removida.
+```C#
+_service.Setup(x => x.DeleteTarefa(It.IsAny<Tarefa>()))
+                .Callback((Tarefa tarefa) => 
+                {
+                    var consulta = _tarefas.FirstOrDefault(x => x.IdTarefa == tarefa.IdTarefa);
+                    if (consulta != null) _tarefas.Remove(tarefa);
+                });
+```
 #
 ### Referências
 https://www.macoratti.net/20/05/net_onion1.htm
