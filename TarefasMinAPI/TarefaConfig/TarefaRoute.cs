@@ -23,7 +23,7 @@ namespace TarefasMinAPI.TarefaConfig
 
         }
 
-        private static IResult PostTarefas(CreateTarefaDTO tarefaDto, ITarefaService service, IMapper mapper) 
+        public static IResult PostTarefas(CreateTarefaDTO tarefaDto, ITarefaService service, IMapper mapper) 
         {
             try
             {
@@ -38,11 +38,11 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static async Task<IResult> BuscaTarefaPorId(int id, ITarefaService service, IMapper mapper) 
+        public static async Task<IResult> BuscaTarefaPorId(int id, ITarefaService service, IMapper mapper) 
         {
             try
             {
-                var consulta = await service.GetTarefaPorId(id);
+                var consulta = await service.GetTarefaPorId(i => i.IdTarefa == id);
                 ReadTarefaDTO tarefa = mapper.Map<ReadTarefaDTO>(consulta);
                 return tarefa is null ? Results.NotFound($"Não encontrada tarefa com {id}") : Results.Ok(tarefa);
             }
@@ -53,13 +53,13 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static IResult BuscaTarefas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5) 
+        public static IResult BuscaTarefas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5) 
         {
             try
             {
                 var consulta = service.ConsultaTarefas(skip, take);
                 var tarefas = mapper.Map<List<ReadTarefaDTO>>(consulta);
-                return tarefas is null ? Results.NotFound($"Tarefas Não encontradas") : Results.Ok(tarefas);
+                return tarefas.IsNullOrEmpty() ? Results.NotFound($"Tarefas Não encontradas") : Results.Ok(tarefas);
             }
             catch (Exception ex)
             {
@@ -68,7 +68,7 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static IResult BuscaTarefasAbertas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
+        public static IResult BuscaTarefasAbertas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
         {
             try
             {
@@ -83,7 +83,7 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static IResult BuscaTarefasConcluidas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
+        public static IResult BuscaTarefasConcluidas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
         {
             try
             {
@@ -98,7 +98,7 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static IResult BuscaTarefasExcluidas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
+        public static IResult BuscaTarefasExcluidas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
         {
             try
             {
@@ -113,7 +113,7 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static IResult BuscaTarefasAtrasadas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
+        public static IResult BuscaTarefasAtrasadas(ITarefaService service, IMapper mapper, int skip = 0, int take = 5)
         {
             try
             {
@@ -128,11 +128,11 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static async Task<IResult> AtualizaStatusTarefa(ITarefaService service, IMapper mapper, int id, string status) 
+        public static async Task<IResult> AtualizaStatusTarefa(ITarefaService service, IMapper mapper, int id, string status) 
         {
             try
             {
-                var consulta = await service.GetTarefaPorId(id);
+                var consulta = await service.GetTarefaPorId(i => i.IdTarefa == id);
 
                 if (consulta == null) return Results.NotFound($"Tarefa de Id: {id} não encontrada");
 
@@ -149,11 +149,11 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static async Task<IResult> AtualizaTarefa(ITarefaService service, IMapper mapper, int id, UpdateTarefaDTO tarefaDTO)
+        public static async Task<IResult> AtualizaTarefa(ITarefaService service, IMapper mapper, int id, UpdateTarefaDTO tarefaDTO)
         {
             try
             {
-                var consulta = await service.GetTarefaPorId(id);
+                var consulta = await service.GetTarefaPorId(i => i.IdTarefa == id);
 
                 if (consulta == null) return Results.NotFound($"Tarefa de Id: {id} não encontrada");
 
@@ -176,9 +176,9 @@ namespace TarefasMinAPI.TarefaConfig
             }
         }
 
-        private static async Task<IResult> DeletaTarefa(int id, ITarefaService service, IMapper mapper) 
+        public static async Task<IResult> DeletaTarefa(int id, ITarefaService service, IMapper mapper) 
         {
-            var consulta = await service.GetTarefaPorId(id);
+            var consulta = await service.GetTarefaPorId(i => i.IdTarefa == id);
 
             if (consulta == null) return Results.NotFound($"Tarefa de Id: {id} não encontrada");
 

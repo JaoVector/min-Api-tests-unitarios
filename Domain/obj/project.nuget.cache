@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mnJaaMlNRlCkXy34Tib4rQBtZox89oWV79McAjLSXX3WRftbgWuue+TRUei11lvZ3+6BDKnUtbVg4iSjY6+ZGg==",
+  "dgSpecHash": "i6aHTAIHNZiXT2Ene5OSqOwNioAZttbFO3pmvKMwrmjTZNJdpWIfURNY6lpe2TXRz24OZsvFoKG2lMbl9CGqgA==",
   "success": true,
-  "projectFilePath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jo4oV\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
     "C:\\Users\\Jo4oV\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.12\\microsoft.entityframeworkcore.abstractions.7.0.12.nupkg.sha512",

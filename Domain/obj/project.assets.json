@@ -645,11 +645,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj",
+      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj",
+      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Jo4oV\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\obj\\",
+      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VisualStudioCommunity\\Shared\\NuGetPackages"

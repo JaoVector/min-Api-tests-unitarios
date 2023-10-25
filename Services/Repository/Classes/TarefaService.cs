@@ -3,6 +3,7 @@ using Services.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -62,10 +63,9 @@ namespace Services.Repository.Classes
             _repository.Delete(tarefa);
         }
 
-        public async Task<Tarefa> GetTarefaPorId(int id) 
+        public async Task<Tarefa> GetTarefaPorId(Expression<Func<Tarefa, bool>> expression)
         {
-            return await _repository.GetById(i => i.IdTarefa == id);
+            return await _repository.GetById(expression);
         }
-
     }
 }

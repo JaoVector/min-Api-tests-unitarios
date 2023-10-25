@@ -682,11 +682,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Services\\Services.csproj",
+      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Services\\Services.csproj",
+      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\Jo4oV\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Services\\obj\\",
+      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VisualStudioCommunity\\Shared\\NuGetPackages"
@@ -709,11 +709,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj"
+            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj"
             },
-            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\Persistence.csproj"
+            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\Persistence.csproj"
             }
           }
         }

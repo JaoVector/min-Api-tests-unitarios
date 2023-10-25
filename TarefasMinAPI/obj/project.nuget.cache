@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "0vmdS9TlnNTIUiZq7TrV0qArHbEzWPvsqsim9//kqRfy5WbttzRrA4vIQkUvKZ5fT/sbjaoti34ZjJgsfOUlBQ==",
+  "dgSpecHash": "ZBmp0gxg1AhsT7VoDJNPmuh8BLjZ6E1WgDGWPvP8NxPU2iIxY6GQ4dzJWFvR2qwDCJg3m1N8NH7KrCVvgpluIQ==",
   "success": true,
-  "projectFilePath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\TarefasMinAPI\\TarefasMinAPI.csproj",
+  "projectFilePath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\TarefasMinAPI\\TarefasMinAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jo4oV\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Jo4oV\\.nuget\\packages\\automapper.collection\\9.0.0\\automapper.collection.9.0.0.nupkg.sha512",

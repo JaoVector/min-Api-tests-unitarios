@@ -984,11 +984,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\Persistence.csproj",
+      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\Persistence.csproj",
       "projectName": "Persistence",
-      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\Persistence.csproj",
+      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\Persistence.csproj",
       "packagesPath": "C:\\Users\\Jo4oV\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\obj\\",
+      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VisualStudioCommunity\\Shared\\NuGetPackages"
@@ -1011,8 +1011,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj"
+            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj"
             }
           }
         }

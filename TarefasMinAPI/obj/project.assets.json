@@ -8256,11 +8256,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\TarefasMinAPI\\TarefasMinAPI.csproj",
+      "projectUniqueName": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\TarefasMinAPI\\TarefasMinAPI.csproj",
       "projectName": "TarefasMinAPI",
-      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\TarefasMinAPI\\TarefasMinAPI.csproj",
+      "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\TarefasMinAPI\\TarefasMinAPI.csproj",
       "packagesPath": "C:\\Users\\Jo4oV\\.nuget\\packages\\",
-      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\TarefasMinAPI\\obj\\",
+      "outputPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\TarefasMinAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\VisualStudioCommunity\\Shared\\NuGetPackages"
@@ -8283,17 +8283,17 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Contracts\\Contracts.csproj": {
-              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Contracts\\Contracts.csproj"
+            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Contracts\\Contracts.csproj": {
+              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Contracts\\Contracts.csproj"
             },
-            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj": {
-              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Domain\\Domain.csproj"
+            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Domain\\Domain.csproj"
             },
-            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\Persistence.csproj": {
-              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\Persistence.csproj"
+            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\Persistence.csproj"
             },
-            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Services\\Services.csproj": {
-              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Services\\Services.csproj"
+            "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Services\\Services.csproj": {
+              "projectPath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Services\\Services.csproj"
             }
           }
         }

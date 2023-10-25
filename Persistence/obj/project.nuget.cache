@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F+buyuNs+XkCFwCsWsYRcBph7EzBNAbimjd6WeJchsCNyf1gApJHRIV4NO8DpjKdfS1vQWFCjGpCOXKn7iPFig==",
+  "dgSpecHash": "RuYlFzd3eYttp0YGD8wbfweJjAZUZJl3dNtSF/4T1B9CWzqXLf080EtqdfHPkFATi0l5UmvtjPphfRePx6GE5w==",
   "success": true,
-  "projectFilePath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture\\Persistence\\Persistence.csproj",
+  "projectFilePath": "D:\\C#_Projetos\\TarefasMinimalApiOnionArchitecture_Testes_Unitarios\\Onion-Min-Api-Tarefa\\Persistence\\Persistence.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jo4oV\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Jo4oV\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.12\\microsoft.entityframeworkcore.7.0.12.nupkg.sha512",
